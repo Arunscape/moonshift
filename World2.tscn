@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
+
+[node name="World2" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131090, 1, 0, 131091, 1, 0, 131092, 1, 0, 131093, 1, 0, 131094, 1, 0, 131095, 1, 0, 131096, 1, 0, 131097, 1, 0, 131098, 1, 0, 196625, 1, 0, 196626, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262161, 1, 0, 327683, 1, 0, 327697, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393232, 1, 0, 393233, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458768, 1, 0, 524295, 1, 0, 524296, 1, 0, 524303, 1, 0, 524304, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 0 )
+
+[node name="WorldComplete" parent="." instance=ExtResource( 3 )]
+position = Vector2( 608, 32 )
+world_scene = "res://World1.tscn"
